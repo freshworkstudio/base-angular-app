@@ -1,0 +1,9 @@
+{
+    "preset": "airbnb",
+    "excludeFiles": ["node_modules/**", "bower_components/**", "resources/assets/js/app.js"],
+    "validateIndentation": "\t",
+    "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+    "disallowTrailingWhitespace": "ignoreEmptyLines",
+    "requireTrailingComma": null,
+    "disallowMultipleVarDecl": null
+}

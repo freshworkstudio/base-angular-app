@@ -1,0 +1,8 @@
+node_modules
+bower_components
+vendor
+public/fonts/
+public/css/
+public/js/
+public/img/
+config.js

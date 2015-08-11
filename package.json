@@ -1,0 +1,16 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Hosting Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "laravel-elixir": "^3.1.2",
+    "laravel-elixir-imagemin": "^0.1.6",
+    "laravel-elixir-ngtemplatecache": "^0.2.0"
+  }
+}
