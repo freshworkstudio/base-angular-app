@@ -1,11 +1,14 @@
 var elixir = require('laravel-elixir');
-require('laravel-elixir-imagemin');
 require('laravel-elixir-ngtemplatecache');
+
+var c, d;
+var a = 2;
+var b = 33;
 
 var paths = {
 	base:		'./',
-	compiled:	'resources/compiled',
-	bower:		'bower_components/',
+	compiled:	'resources/compiled/',
+	bower:		'vendor/bower_components/',
 	assets:		'resources/assets/',
 	js:			'resources/assets/js/',
 	css:		'resources/assets/css/',
@@ -16,42 +19,49 @@ var paths = {
 };
 
 elixir(function(mix) {
-	mix.imagemin();
-	mix.ngTemplateCache(null, './resources/assets/js', './public/', {
+
+	//cache html templates
+	mix.ngTemplateCache(null, 'resources/assets/js', 'app/', {
 		htmlmin: {
-			collapseWhitespace: true,
+			collapseWhitespace: false,
 			removeComments: true
 		}
 	});
 
+	//compile less files
 	mix.less('app.less', paths.compiled);
 
+	//merge css
 	mix.styles([
 		paths.bower + 'bootstrap/dist/css/bootstrap.css',
 		paths.bower + 'font-awesome/css/font-awesome.css',
-		paths.compiled	+ 'app.css'
+		paths.css + '**',
+		paths.compiled	+ '**'
 
 	], 'public/css', './');
 
+	//merge scripts
 	mix.scripts([
 
 		'config.js',
 		paths.bower + 'jquery/dist/jquery.js',
-		paths.bower + 'lodash/lodash.js',
+		paths.bower + 'underscore/underscore.js',
 		paths.bower + 'angular/angular.js',
 		paths.bower + 'angular-ui-router/release/angular-ui-router.js',
 		paths.bower + 'angular-sanitize/angular-sanitize.js',
+		paths.bower + 'angular-breadcrumb/dist/angular-breadcrumb.js',
 		paths.bower + 'bootstrap/dist/js/bootstrap.js',
 		paths.bower + 'fastclick/lib/fastclick.js',
 		paths.bower + 'angular-restmod/dist/angular-restmod-bundle.js',
 		paths.bower + 'moment/moment.js',
 		paths.js	+ '*/**.js',
-		paths.js	+ '*.js'
+		paths.js	+ '*.js',
+		paths.base	+ 'app/app.js',
+		paths.base	+ 'app/**/**.js'
 
 	], 'public/js', './');
 
-	mix.copy(paths.bower +  'font-awesome/fonts/', paths.publicDir + 'fonts/');
-	mix.copy(paths.bower +  'bootstrap/fonts/', paths.publicDir + 'fonts/');
-	mix.copy(paths.bower +	'iCheck/skins/square/blue.png', paths.publicDir + 'css/');
-	mix.copy(paths.bower +	'iCheck/skins/square/blue@2x.png', paths.publicDir + 'css/');
+	//copy files to public dir
+	mix.copy(paths.bower +  'font-awesome/fonts', paths.publicDir + 'fonts/');
+	mix.copy(paths.bower +  'bootstrap/fonts', paths.publicDir + 'fonts/');
 });

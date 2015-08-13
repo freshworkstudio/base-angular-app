@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gulp": "^3.9.0",
     "laravel-elixir": "^3.1.2",
     "laravel-elixir-imagemin": "^0.1.6",
     "laravel-elixir-ngtemplatecache": "^0.2.0"
