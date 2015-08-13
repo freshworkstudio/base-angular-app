@@ -79,6 +79,7 @@ bower.json
 ```
 #### app
 The `\app` directory is where you put your application code, including .js and html templates. You can check the default code that comes with the project as an example.
+
 As you can see, `\app\modules` contains the pieces of your application, grouped in folders to organize your code. Btw, you can organize everything in the `\app` directory as you want.
 
 In the gulp process, every `.js` file in this folder is gruped and merged in a final `public/js/all.js`, and every `.html` file is merged and cached in a [templateCache](https://docs.angularjs.org/api/ng/service/$templateCache) angular service.
