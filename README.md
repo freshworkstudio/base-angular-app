@@ -19,6 +19,7 @@ Clone the repo:
 ```bash
 cd /path/to/your/projects/
 git clone https://github.com/freshworkstudio/base-angular-app.git my_awesome_project
+cd my_awesome_project
 ```
 Run the compilation process with gulp.
 
@@ -69,6 +70,9 @@ gulp watch
 		\img
 	\compiled
 \public
+	\js
+	\css
+	index.html
 .jscsrc
 .bowerrc
 .gitignore
@@ -95,6 +99,8 @@ Add aditional css files in `resources\assets\css`directory if you want.
 #### img
 The `\resources\assets\img` directory is minded to put your project images and then add a gulp task to minify your images and copy them to public/img, but this is not already done by default in this project. Maybe later.
 
+#### \public
+Tis is the main directory. All your compiled file finally get there. If you are running this in a eb server, you just have to set the pubic directory as this folder, so no one can access tour source files, just the compiled ones.
 
 ## Bower dependencies
 This base project come with some useful libraries, but obviously you can use whatever you want. Just edit `bower.json`
