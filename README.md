@@ -1,5 +1,5 @@
 # Base Angular Application
-#### Single plage application made easy
+#### Single page application made easy
 This repo let you create an awesome angular app from scratch, giving you a simple and elegant boilerplate for your new project.
 
 ## Compilation
