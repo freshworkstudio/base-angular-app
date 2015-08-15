@@ -40,6 +40,7 @@ bower install
 ```
 That's all. Then, when you start editing your project code, you just have to run `gulp watch` before you start coding. This will watch your filesystem waiting for changes and automatically compile your files when you saves them.
 ```bash
+gulp
 gulp watch
 ```
 
