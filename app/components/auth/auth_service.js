@@ -70,9 +70,14 @@ function TestAuthService($window, $rootScope) {
 		};
 		_this.setCurrentUser(user);
 		$window.sessionStorage.token = 'faketoken';
-		
-		//Always success
-		onSuccess(user, 200);
+
+		//Emulate some delay in the response...
+		setTimeout(function() {
+			//Always success
+			onSuccess(user, 200);
+
+		}, 1000);
+
 	};
 
 	this.logout = function() {
