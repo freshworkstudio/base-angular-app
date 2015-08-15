@@ -1,4 +1,5 @@
 # Base Angular Application
+#### Single plage application made easy
 This repo let you create an awesome angular app from scratch, giving you a simple and elegant boilerplate for your new project.
 
 ## Compilation
@@ -37,7 +38,7 @@ Install bower dependencies
 ```bash
 bower install
 ```
-That's all. Then, when you start editing your project code, you just have to run gulp watcher before you start to run and watch your filesystem waiting for changes and automatically compile your files as you saves them.
+That's all. Then, when you start editing your project code, you just have to run `gulp watch` before you start coding. This will watch your filesystem waiting for changes and automatically compile your files when you saves them.
 ```bash
 gulp watch
 ```

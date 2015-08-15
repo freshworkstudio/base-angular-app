@@ -1,0 +1,21 @@
+<form class="form-signin" ng-submit="login()">
+
+	<h2 class="form-signin-heading">Please sign in</h2>
+
+	<p>We created a fake <code>authService</code> class, so you can login with any credentials....</p> 
+	<label for="inputEmail" class="sr-only">Email address</label>
+	<input type="email" ng-model="auth.email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+
+	<label for="inputPassword" class="sr-only">Password</label>
+	<input type="password" ng-model="auth.password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+	<div class="checkbox">
+		<label>
+			<input type="checkbox" ng-model="auth.remember" value="remember-me"> Remember me
+		</label>
+	</div>
+
+	<button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="submitting">
+		{{ submitting ? 'Signing in...' : 'Sign in' }}
+	</button>
+</form>

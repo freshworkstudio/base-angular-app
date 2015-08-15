@@ -16,16 +16,7 @@ routes.config(['$stateProvider', '$urlRouterProvider', '$breadcrumbProvider', '$
 			templateUrl: 'templates/default.html',
 			controller: 'BaseController',
 			data: {
-				requireLogin: true
-			}
-		})
-		.state('app.home', {
-			url: '/',
-			templateUrl: 'modules/home/home.html',
-			controller: 'HomeController',
-			ncyBreadcrumb: {
-				label: 'Inicio'
+				requireLogin: false
 			}
 		});
-
 }]);

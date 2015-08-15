@@ -1,0 +1,16 @@
+
+<div class="row">
+	<div ncy-breadcrumb></div>
+	<div class="col-md-12">
+		<h2>You're now loged!</h2>
+		<p>Try to go back to the home page, and then come back again to this dashboard to check if works, even if you refresh your browser. </p>
+		<p>Note: everything in here is public, you can't put sensitive information in here...</p>
+
+		<p>You can try to call some API with the token retrieved in
+			the login process (JWT or whatever you want), probably saved in
+			something lie <code>$window.sessionStorage.token</code> and then
+			get some super mega secret data, but remember that every <code>.js</code> code and <code>.html</code> in here are easely accesible even if the user is not loged in, so don't put any sensitive information hardcoded.</p>
+
+		<a href="" ng-click="logout()">Log out <i class="fa fa-sign-out"></i></a>
+	</div>
+</div>

@@ -1,8 +1,9 @@
 {
   "name": "web",
   "version": "1.0.0",
-  "description": "Hosting Web",
+  "description": "Angular Base - Single Page Application",
   "main": "index.js",
+  "repository": "https://github.com/freshworkstudio/base-angular-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

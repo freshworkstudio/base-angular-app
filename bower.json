@@ -23,6 +23,7 @@
     "moment": "~2.10.6",
     "font-awesome": "~4.4.0",
     "angular-breadcrumb": "~0.4.1",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "sweetalert": "~1.1.0"
   }
 }
