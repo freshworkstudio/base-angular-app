@@ -1,6 +1,5 @@
 var elixir = require('laravel-elixir');
 require('laravel-elixir-ngtemplatecache');
-require('laravel-elixir-angular');
 
 elixir.extend('angular-order', function() {
 
